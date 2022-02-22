@@ -1,0 +1,133 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						3
+					],
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "MainProject",
+					"childIndexes" : 
+					[
+						2
+					],
+					"jsonFile" : "directory-MainProject-Release-b452a7c91e6bca438cb3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "MainProject"
+				},
+				{
+					"build" : "MainProject/src",
+					"jsonFile" : "directory-MainProject.src-Release-1dc234075eba1f286590.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "MainProject/src",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "Lib",
+					"childIndexes" : 
+					[
+						4
+					],
+					"jsonFile" : "directory-Lib-Release-98eec33155a750787291.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Lib"
+				},
+				{
+					"build" : "Lib/src",
+					"jsonFile" : "directory-Lib.src-Release-e0e59fea017b8d917b2c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 0,
+					"source" : "Lib/src",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "OpenGL",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 4,
+					"id" : "Lib::@dc340e4ff137625db2f0",
+					"jsonFile" : "target-Lib-Release-b61bb223150342bda0b3.json",
+					"name" : "Lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "MainProject::@cddc410bf258f5fd41bc",
+					"jsonFile" : "target-MainProject-Release-0d869f5aa1185793e59c.json",
+					"name" : "MainProject",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/build",
+		"source" : "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -1,0 +1,47 @@
+[
+{
+  "directory": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/build",
+  "command": "/bin/c++ -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/inc -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/Lib/inc -O3 -DNDEBUG -o MainProject/src/CMakeFiles/MainProject.dir/main.cpp.o -c /home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/main.cpp",
+  "file": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/main.cpp"
+},
+{
+  "directory": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/build",
+  "command": "/bin/c++ -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/inc -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/Lib/inc -O3 -DNDEBUG -o MainProject/src/CMakeFiles/MainProject.dir/Camera.cpp.o -c /home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/Camera.cpp",
+  "file": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/Camera.cpp"
+},
+{
+  "directory": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/build",
+  "command": "/bin/c++ -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/inc -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/Lib/inc -O3 -DNDEBUG -o MainProject/src/CMakeFiles/MainProject.dir/EBO.cpp.o -c /home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/EBO.cpp",
+  "file": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/EBO.cpp"
+},
+{
+  "directory": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/build",
+  "command": "/bin/c++ -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/inc -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/Lib/inc -O3 -DNDEBUG -o MainProject/src/CMakeFiles/MainProject.dir/Texture.cpp.o -c /home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/Texture.cpp",
+  "file": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/Texture.cpp"
+},
+{
+  "directory": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/build",
+  "command": "/bin/c++ -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/inc -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/Lib/inc -O3 -DNDEBUG -o MainProject/src/CMakeFiles/MainProject.dir/VAO.cpp.o -c /home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/VAO.cpp",
+  "file": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/VAO.cpp"
+},
+{
+  "directory": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/build",
+  "command": "/bin/c++ -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/inc -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/Lib/inc -O3 -DNDEBUG -o MainProject/src/CMakeFiles/MainProject.dir/VBO.cpp.o -c /home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/VBO.cpp",
+  "file": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/VBO.cpp"
+},
+{
+  "directory": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/build",
+  "command": "/bin/c++ -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/inc -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/Lib/inc -O3 -DNDEBUG -o MainProject/src/CMakeFiles/MainProject.dir/player.cpp.o -c /home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/player.cpp",
+  "file": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/player.cpp"
+},
+{
+  "directory": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/build",
+  "command": "/bin/c++ -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/inc -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/Lib/inc -O3 -DNDEBUG -o MainProject/src/CMakeFiles/MainProject.dir/shaderClass.cpp.o -c /home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/shaderClass.cpp",
+  "file": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/shaderClass.cpp"
+},
+{
+  "directory": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/build",
+  "command": "/bin/clang-13 -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/Lib/inc -O3 -DNDEBUG -o Lib/src/CMakeFiles/Lib.dir/glad.c.o -c /home/hvlife/Documents/Programming/CPP/BMC_OpenGL/Lib/src/glad.c",
+  "file": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/Lib/src/glad.c"
+}
+]
