@@ -8,14 +8,14 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-#include <player.h>
-#include <shaderClass.h>
-#include <VAO.h>
-#include <VBO.h>
-#include <EBO.h>
-#include <Texture.h>
-#include <Camera.h>
-#include <vars.h>
+#include <player.hpp>
+#include <shaderClass.hpp>
+#include <VAO.hpp>
+#include <VBO.hpp>
+#include <EBO.hpp>
+#include <Texture.hpp>
+#include <Camera.hpp>
+#include <vars.hpp>
 
 
 #define WNDW_WIDTH 1920

@@ -1,4 +1,4 @@
-#include <player.h>
+#include <player.hpp>
 
 Player::Player(int x, int y, int spd, int acc){
     this->x = x;

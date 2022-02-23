@@ -1,12 +1,14 @@
 # ninja log v5
-0	67	1645534815184326719	MainProject/src/CMakeFiles/MainProject.dir/EBO.cpp.o	fe2c3fdc70dbe77d
-1	70	1645534815187326679	MainProject/src/CMakeFiles/MainProject.dir/VAO.cpp.o	b6d88a3cb79b930b
-1	113	1645534815230326104	MainProject/src/CMakeFiles/MainProject.dir/VBO.cpp.o	d3cf4162e05b43e4
-1	450	1645534815566321606	MainProject/src/CMakeFiles/MainProject.dir/player.cpp.o	82a9b9c9a3a5147d
-2	762	1645534815879317416	MainProject/src/CMakeFiles/MainProject.dir/shaderClass.cpp.o	5b299ef3d89d434b
-0	1389	1645534816507309025	MainProject/src/CMakeFiles/MainProject.dir/main.cpp.o	15372a6ba4ec82b9
-0	985	1645534816102314434	MainProject/src/CMakeFiles/MainProject.dir/Camera.cpp.o	2abba653aa4e0ff
+1	180	1645613543053195665	MainProject/src/CMakeFiles/MainProject.dir/EBO.cpp.o	fe2c3fdc70dbe77d
+1	79	1645613558678109125	MainProject/src/CMakeFiles/MainProject.dir/VAO.cpp.o	b6d88a3cb79b930b
+2	179	1645613543051195676	MainProject/src/CMakeFiles/MainProject.dir/VBO.cpp.o	d3cf4162e05b43e4
+7	545	1645613543417193637	MainProject/src/CMakeFiles/MainProject.dir/player.cpp.o	82a9b9c9a3a5147d
+10	577	1645613543450193453	MainProject/src/CMakeFiles/MainProject.dir/shaderClass.cpp.o	5b299ef3d89d434b
+2	1088	1645613608110842049	MainProject/src/CMakeFiles/MainProject.dir/main.cpp.o	15372a6ba4ec82b9
+1	1098	1645613577748004939	MainProject/src/CMakeFiles/MainProject.dir/Camera.cpp.o	2abba653aa4e0ff
 8	1683	1645534816794305192	Lib/src/CMakeFiles/Lib.dir/glad.c.o	f419037611408c20
-1	4631	1645534819748265894	MainProject/src/CMakeFiles/MainProject.dir/Texture.cpp.o	553d55b94bc68224
+2	4611	1645613611633823372	MainProject/src/CMakeFiles/MainProject.dir/Texture.cpp.o	553d55b94bc68224
 1683	1724	1645534816840304578	Lib/src/libLib.a	6accd727808db2fd
-4631	4746	1645534819861264395	MainProject/src/MainProject	e60b2efdd774cc0
+4611	4781	1645613611801822482	MainProject/src/MainProject	e60b2efdd774cc0
+1	1072	1645613796470842328	MainProject/src/CMakeFiles/MainProject.dir/main.cpp.o	15372a6ba4ec82b9
+1072	1203	1645613796599841651	MainProject/src/MainProject	e60b2efdd774cc0

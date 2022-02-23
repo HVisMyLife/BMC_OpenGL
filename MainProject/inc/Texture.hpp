@@ -2,7 +2,7 @@
 #define TEXTURE_CLASS_H
 
 #include <glad/glad.h>
-#include <shaderClass.h>
+#include <shaderClass.hpp>
 
 class Texture
 {
