@@ -1,6 +1,7 @@
 #ifndef CAMERA_CLASS_H
 #define CAMERA_CLASS_H
 
+#include <iostream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
@@ -18,6 +19,7 @@ public:
 	glm::vec3 Position;
 	glm::vec3 Orientation = glm::vec3(0.0f, 0.0f, -1.0f);
 	glm::vec3 Up = glm::vec3(0.0f, 1.0f, 0.0f);
+	glm::vec3 LR = glm::vec3(1.0f, 0.0f, 0.0f);
 	glm::mat4 cameraMatrix = glm::mat4(1.0f);
 
 	// Prevents the camera from jumping around when first clicking left click

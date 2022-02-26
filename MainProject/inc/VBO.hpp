@@ -11,6 +11,9 @@ public:
 	// Constructor that generates a Vertex Buffer Object and links it to vertices
 	VBO(GLfloat* vertices, GLsizeiptr size);
 
+	VBO();
+	void Sec(GLfloat*, GLsizeiptr);
+
 	// Binds the VBO
 	void Bind();
 	// Unbinds the VBO

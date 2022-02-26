@@ -97,10 +97,8 @@ void Camera::Inputs(GLFWwindow* window)
 		glm::vec3 newOrientation = glm::rotate(Orientation, glm::radians(-rotX), glm::normalize(glm::cross(Orientation, Up)));
 
 		// Decides whether or not the next vertical Orientation is legal or not
-		if (abs(glm::angle(newOrientation, Up) - glm::radians(90.0f)) <= glm::radians(85.0f))
-		{
-			Orientation = newOrientation;
-		}
+		if (glm::angle(newOrientation, Up) > glm::angle(Orientation, Up) && glm::angle(newOrientation, Up) < glm::radians(175.0f) ||
+			glm::angle(newOrientation, Up) < glm::angle(Orientation, Up) && glm::angle(newOrientation, Up) > glm::radians(5.0f)) Orientation = newOrientation;
 
 		// Rotates the Orientation left and right
 		Orientation = glm::rotate(Orientation, glm::radians(-rotY), Up);

@@ -1,14 +1,13 @@
 # ninja log v5
-1	180	1645613543053195665	MainProject/src/CMakeFiles/MainProject.dir/EBO.cpp.o	fe2c3fdc70dbe77d
-1	79	1645613558678109125	MainProject/src/CMakeFiles/MainProject.dir/VAO.cpp.o	b6d88a3cb79b930b
-2	179	1645613543051195676	MainProject/src/CMakeFiles/MainProject.dir/VBO.cpp.o	d3cf4162e05b43e4
+3	91	1645900306971774650	MainProject/src/CMakeFiles/MainProject.dir/EBO.cpp.o	fe2c3fdc70dbe77d
+1	71	1645901632917455459	MainProject/src/CMakeFiles/MainProject.dir/VAO.cpp.o	b6d88a3cb79b930b
+1	69	1645902000352049982	MainProject/src/CMakeFiles/MainProject.dir/VBO.cpp.o	d3cf4162e05b43e4
 7	545	1645613543417193637	MainProject/src/CMakeFiles/MainProject.dir/player.cpp.o	82a9b9c9a3a5147d
 10	577	1645613543450193453	MainProject/src/CMakeFiles/MainProject.dir/shaderClass.cpp.o	5b299ef3d89d434b
-2	1088	1645613608110842049	MainProject/src/CMakeFiles/MainProject.dir/main.cpp.o	15372a6ba4ec82b9
-1	1098	1645613577748004939	MainProject/src/CMakeFiles/MainProject.dir/Camera.cpp.o	2abba653aa4e0ff
-8	1683	1645534816794305192	Lib/src/CMakeFiles/Lib.dir/glad.c.o	f419037611408c20
+4	1787	1645905829146342796	MainProject/src/CMakeFiles/MainProject.dir/main.cpp.o	15372a6ba4ec82b9
+2	1023	1645905266661940767	MainProject/src/CMakeFiles/MainProject.dir/Camera.cpp.o	2abba653aa4e0ff
+1	1435	1645835681155526204	Lib/src/CMakeFiles/Lib.dir/glad.c.o	f419037611408c20
 2	4611	1645613611633823372	MainProject/src/CMakeFiles/MainProject.dir/Texture.cpp.o	553d55b94bc68224
-1683	1724	1645534816840304578	Lib/src/libLib.a	6accd727808db2fd
-4611	4781	1645613611801822482	MainProject/src/MainProject	e60b2efdd774cc0
-1	1072	1645613796470842328	MainProject/src/CMakeFiles/MainProject.dir/main.cpp.o	15372a6ba4ec82b9
-1072	1203	1645613796599841651	MainProject/src/MainProject	e60b2efdd774cc0
+2	1035	1645905431543890379	MainProject/src/CMakeFiles/MainProject.dir/Object.cpp.o	f56df7819d0ce838
+1	68	1645835747480240519	Lib/src/libLib.a	6accd727808db2fd
+1787	1945	1645905829303341782	MainProject/src/MainProject	3c84740973fc4e19

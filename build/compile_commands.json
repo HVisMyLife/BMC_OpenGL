@@ -16,6 +16,11 @@
 },
 {
   "directory": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/build",
+  "command": "/bin/c++ -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/inc -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/Lib/inc -O3 -DNDEBUG -o MainProject/src/CMakeFiles/MainProject.dir/Object.cpp.o -c /home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/Object.cpp",
+  "file": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/Object.cpp"
+},
+{
+  "directory": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/build",
   "command": "/bin/c++ -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/inc -I/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/Lib/inc -O3 -DNDEBUG -o MainProject/src/CMakeFiles/MainProject.dir/Texture.cpp.o -c /home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/Texture.cpp",
   "file": "/home/hvlife/Documents/Programming/CPP/BMC_OpenGL/MainProject/src/Texture.cpp"
 },

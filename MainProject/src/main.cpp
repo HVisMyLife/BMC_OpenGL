@@ -16,6 +16,7 @@
 #include <Texture.hpp>
 #include <Camera.hpp>
 #include <vars.hpp>
+#include <Object.hpp>
 
 
 #define WNDW_WIDTH 1920
@@ -67,12 +68,34 @@ int init(void)
 	return 0;
 }
 
+
 int main(void)
 {
 	init();
 	Player player = Player(10,10,25,30);
-	
-	Shader shaderProgram("../../resources/shaders/default.vert", "../../resources/shaders/default.frag"); // Generates Shader object using shaders defualt.vert and default.frag
+	Camera camera(WNDW_WIDTH, WNDW_HEIGHT, glm::vec3(0.0f, 0.0f, 2.0f));
+
+	Shader lightShader("../../resources/shaders/light.vert", "../../resources/shaders/light.frag"); // Shader for light cube
+	VAO lightVAO; // Generates Vertex Array Object
+	lightVAO.Bind(); // Binds it
+	VBO lightVBO(lightVertices, sizeof(lightVertices)); // Generates Vertex Buffer Object and links it to vertices
+	EBO lightEBO(lightIndices, sizeof(lightIndices)); // Generates Element Buffer Object and links it to indices
+	lightVAO.LinkAttrib(lightVBO, 0, 3, GL_FLOAT, 3 * sizeof(float), (void*)0); // Links VBO attributes such as coordinates and colors to VAO
+	lightVAO.Unbind(); // Unbind to prevent accidentally modifying
+	lightVBO.Unbind(); // Unbind to prevent accidentally modifying
+	lightEBO.Unbind(); // Unbind to prevent accidentally modifying
+
+	glm::vec4 lightColor = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
+	glm::vec3 lightPos = glm::vec3(0.5f, 0.5f, 0.5f);
+	glm::mat4 lightModel = glm::mat4(1.0f);
+	lightModel = glm::translate(lightModel, lightPos);
+
+	lightShader.Activate();
+	glUniformMatrix4fv(glGetUniformLocation(lightShader.ID, "model"), 1, GL_FALSE, glm::value_ptr(lightModel));
+	glUniform4f(glGetUniformLocation(lightShader.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
+
+
+	Shader shaderProgram("../../resources/shaders/default.vert", "../../resources/shaders/default.frag");
 	VAO VAO1; // Generates Vertex Array Object
 	VAO1.Bind(); // Binds it
 	VBO VBO1(vertices, sizeof(vertices)); // Generates Vertex Buffer Object and links it to vertices
@@ -85,40 +108,21 @@ int main(void)
 	VBO1.Unbind(); // Unbind to prevent accidentally modifying
 	EBO1.Unbind(); // Unbind to prevent accidentally modifying
 
-	Shader lightShader("../../resources/shaders/light.vert", "../../resources/shaders/light.frag"); // Shader for light cube
-	VAO lightVAO; // Generates Vertex Array Object
-	lightVAO.Bind(); // Binds it
-	VBO lightVBO(lightVertices, sizeof(lightVertices)); // Generates Vertex Buffer Object and links it to vertices
-	EBO lightEBO(lightIndices, sizeof(lightIndices)); // Generates Element Buffer Object and links it to indices
-	lightVAO.LinkAttrib(lightVBO, 0, 3, GL_FLOAT, 3 * sizeof(float), (void*)0); // Links VBO attributes such as coordinates and colors to VAO
-	lightVAO.Unbind(); // Unbind to prevent accidentally modifying
-	lightVBO.Unbind(); // Unbind to prevent accidentally modifying
-	lightEBO.Unbind(); // Unbind to prevent accidentally modifying
-
-
-	glm::vec4 lightColor = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
-	glm::vec3 lightPos = glm::vec3(0.5f, 0.5f, 0.5f);
-	glm::mat4 lightModel = glm::mat4(1.0f);
-	lightModel = glm::translate(lightModel, lightPos);
-
-	glm::vec3 pyramidPos = glm::vec3(0.0f, 0.0f, 0.0f);
+	glm::vec3 pyramidPos = glm::vec3(0.002f, 0.0f, 0.0f);
 	glm::mat4 pyramidModel = glm::mat4(1.0f);
 	pyramidModel = glm::translate(pyramidModel, pyramidPos);
 
-	lightShader.Activate();
-	glUniformMatrix4fv(glGetUniformLocation(lightShader.ID, "model"), 1, GL_FALSE, glm::value_ptr(lightModel));
-	glUniform4f(glGetUniformLocation(lightShader.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
 	shaderProgram.Activate();
 	glUniformMatrix4fv(glGetUniformLocation(shaderProgram.ID, "model"), 1, GL_FALSE, glm::value_ptr(pyramidModel));
 	glUniform4f(glGetUniformLocation(shaderProgram.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
 	glUniform3f(glGetUniformLocation(shaderProgram.ID, "lightPos"), lightPos.x, lightPos.y, lightPos.z);
 
-
-	Texture picture("../../resources/images/img.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
+	const char* pathToImg = "../../resources/images/img.png";
+	Texture picture(pathToImg, GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
 	picture.texUnit(shaderProgram, "tex0", 0);
 
-	Camera camera(WNDW_WIDTH, WNDW_HEIGHT, glm::vec3(0.0f, 0.0f, 2.0f));
-	
+
+	//Object object(vertices, indices, glm::vec3(), pathToImg, lightColor, lightPos);
 
 	while (!quit && !glfwWindowShouldClose(window))
 	{
@@ -128,20 +132,26 @@ int main(void)
 		
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // Clean the back buffer and assign the new color to it
 
+		camera.Inputs(window);
+		camera.updateMatrix(45.0f, 0.1f, 100.0f);
+
 		shaderProgram.Activate(); // Tell OpenGL which Shader Program we want to use
 		picture.Bind();
 		VAO1.Bind(); // Bind the VAO so OpenGL knows to use it
-		camera.Inputs(window);
-		camera.updateMatrix(45.0f, 0.1f, 100.0f);
-		camera.Matrix(shaderProgram, "camMatrix");
 		glUniform3f(glGetUniformLocation(shaderProgram.ID, "camPos"), camera.Position.x, camera.Position.y, camera.Position.z); // Exports the camera Position to the Fragment Shader for specular lighting
 		glDrawElements(GL_TRIANGLES, sizeof(indices)/sizeof(int), GL_UNSIGNED_INT, 0); // Draw primitives, number of indices, datatype of indices, index of indices
-
+		pyramidModel = glm::translate(pyramidModel, pyramidPos);
+		glUniformMatrix4fv(glGetUniformLocation(shaderProgram.ID, "model"), 1, GL_FALSE, glm::value_ptr(pyramidModel));
+		glUniform4f(glGetUniformLocation(shaderProgram.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, lightColor.w);
+		glUniform3f(glGetUniformLocation(shaderProgram.ID, "lightPos"), lightPos.x, lightPos.y, lightPos.z);
+		camera.Matrix(shaderProgram, "camMatrix");
+		
+		//object.draw(camera);
 		
 		lightShader.Activate(); // Tells OpenGL which Shader Program we want to use
-		camera.Matrix(lightShader, "camMatrix"); // Export the camMatrix to the Vertex Shader of the light cube
 		lightVAO.Bind(); // Bind the VAO so OpenGL knows to use it
 		glDrawElements(GL_TRIANGLES, sizeof(lightIndices) / sizeof(int), GL_UNSIGNED_INT, 0); // Draw primitives, number of indices, datatype of indices, index of indices
+		camera.Matrix(lightShader, "camMatrix"); // Export the camMatrix to the Vertex Shader of the light cube
 
 		glfwSwapBuffers(window);
 	}
@@ -162,13 +172,12 @@ int main(void)
 
 
 void trash(GLFWwindow* window){
-  if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) printf("Spacing...lol;)XD\n");
+  //if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) printf("Spacing...lol;)XD\n");
 }
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
   if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS) {printf("MESSAGE: <ESC> is pressed...\n"); quit=true;}
-  if (key == GLFW_KEY_SPACE && action == GLFW_PRESS) {printf("MESSAGE: <SPACE> is pressed...\n");}
 }
 
 static void cursor_position_callback(GLFWwindow* window, double xpos, double ypos)
